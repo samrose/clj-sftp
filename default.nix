@@ -4,10 +4,10 @@ let cljdeps = import ./deps.nix { inherit pkgs; };
     classp  = cljdeps.makeClasspaths {};
 
 in stdenv.mkDerivation {
-  name = "mediawiki";
+  name = "clj-sftp";
   src = ./.;
   buildInputs = [ clojure jre openssl];
   installPhase = ''
-      ${clojure}/bin/clojure -i src/mediawiki/core.clj -Scp ${classp}
+      ${clojure}/bin/clojure -i src/clj-sftp/core.clj -Scp ${classp}
   '';
 }

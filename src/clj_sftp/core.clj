@@ -18,7 +18,7 @@
          (.disconnect ~(first binding))
          (.disconnect session#)))))
 (defn ls
-  "Get statistics of the pointed path."
+  "List files on the path."
   [channel path]
   (.ls channel path))
 
