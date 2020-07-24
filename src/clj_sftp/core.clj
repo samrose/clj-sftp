@@ -17,6 +17,10 @@
        (finally
          (.disconnect ~(first binding))
          (.disconnect session#)))))
+(defn ls
+  "Get statistics of the pointed path."
+  [channel path]
+  (.ls channel path))
 
 (defn lstat
   "Get statistics of the pointed path."
